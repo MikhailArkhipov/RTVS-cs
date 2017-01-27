@@ -42,6 +42,7 @@
             // 
             // executeButton
             // 
+            this.executeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.executeButton.Location = new System.Drawing.Point(476, 15);
             this.executeButton.Name = "executeButton";
             this.executeButton.Size = new System.Drawing.Size(95, 23);
@@ -61,6 +62,7 @@
             // 
             // plotButton
             // 
+            this.plotButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.plotButton.Location = new System.Drawing.Point(476, 55);
             this.plotButton.Name = "plotButton";
             this.plotButton.Size = new System.Drawing.Size(95, 23);
@@ -71,6 +73,7 @@
             // 
             // getDataframeButton
             // 
+            this.getDataframeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.getDataframeButton.Location = new System.Drawing.Point(476, 96);
             this.getDataframeButton.Name = "getDataframeButton";
             this.getDataframeButton.Size = new System.Drawing.Size(95, 23);
@@ -81,6 +84,7 @@
             // 
             // getListButton
             // 
+            this.getListButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.getListButton.Location = new System.Drawing.Point(476, 135);
             this.getListButton.Name = "getListButton";
             this.getListButton.Size = new System.Drawing.Size(95, 23);
@@ -91,6 +95,9 @@
             // 
             // resultBox
             // 
+            this.resultBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.resultBox.Location = new System.Drawing.Point(15, 58);
             this.resultBox.Name = "resultBox";
             this.resultBox.Size = new System.Drawing.Size(442, 326);
@@ -98,7 +105,7 @@
             this.resultBox.TabStop = false;
             this.resultBox.Text = "Result";
             // 
-            // Form1
+            // RHostApiTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +117,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.executeButton);
             this.Controls.Add(this.codeBox);
-            this.Name = "Form1";
+            this.Name = "RHostApiTestForm";
             this.Text = "R API Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);

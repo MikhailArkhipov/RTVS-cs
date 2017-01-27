@@ -30,6 +30,7 @@ namespace ApiTest {
 
         private async void executeButton_Click(object sender, EventArgs e) {
             try {
+                await _sessionStartTask;
                 var result = await _session.ExecuteAndOutputAsync(codeBox.Text);
                 DisplayResult(new TextBox() { Text = result.Output });
             } catch (Exception ex) {
@@ -39,6 +40,7 @@ namespace ApiTest {
 
         private async void plotButton_Click(object sender, EventArgs e) {
             try {
+                await _sessionStartTask;
                 var data = await _session.PlotAsync(codeBox.Text, 640, 480, 96);
                 var pb = new PictureBox();
                 pb.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -51,6 +53,7 @@ namespace ApiTest {
 
         private async void getListButton_Click(object sender, EventArgs e) {
             try {
+                await _sessionStartTask;
                 var list = await _session.GetListAsync(codeBox.Text);
                 DisplayResult(list);
             } catch (Exception ex) {
@@ -60,6 +63,7 @@ namespace ApiTest {
 
         private async void getDataframe_Click(object sender, EventArgs e) {
             try {
+                await _sessionStartTask;
                 var df = await _session.GetDataFrameAsync(codeBox.Text);
                 DisplayResult(df);
             } catch (Exception ex) {
@@ -75,10 +79,10 @@ namespace ApiTest {
 
             if (control != null) {
                 control.Width = resultBox.Width;
-                control.Height = resultBox.Height - 8;
+                control.Height = resultBox.Height;
                 control.Parent = resultBox;
-                _currentDisplay = control;
             }
+            _currentDisplay = control;
         }
 
         private void DisplayResult(IEnumerable<object> collection) {
