@@ -9,6 +9,7 @@ that demostrate use of the R-to-.NET interface. The API based on [R Tools for Vi
 4. Support for remote connections (like in RTVS 1.0+) will be added in the future
 
 The followig operations are supported:
+
 1. Arbitrary R expression evaluation.
 2. Data transfer between R and .NET (basic types, lists, data frames) 
 3. R function calls passing arguments in .NET types.
