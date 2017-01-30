@@ -20,5 +20,5 @@ The followig operations are supported:
 API [Source code](https://github.com/Microsoft/RTVS/tree/master/src/Host/API/Impl) and
 [Test code](https://github.com/Microsoft/RTVS/tree/master/src/Host/API/Test)
 
-NuGet [package]()
+NuGet [package](https://www.nuget.org/packages/Microsoft.R.Host.Client.API/1.0.0)
 
