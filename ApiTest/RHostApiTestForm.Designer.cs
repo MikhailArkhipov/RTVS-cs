@@ -37,13 +37,14 @@
             this.codeBox.Location = new System.Drawing.Point(58, 14);
             this.codeBox.Multiline = true;
             this.codeBox.Name = "codeBox";
-            this.codeBox.Size = new System.Drawing.Size(399, 24);
+            this.codeBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.codeBox.Size = new System.Drawing.Size(611, 144);
             this.codeBox.TabIndex = 0;
             // 
             // executeButton
             // 
             this.executeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.executeButton.Location = new System.Drawing.Point(476, 15);
+            this.executeButton.Location = new System.Drawing.Point(686, 15);
             this.executeButton.Name = "executeButton";
             this.executeButton.Size = new System.Drawing.Size(95, 23);
             this.executeButton.TabIndex = 1;
@@ -63,7 +64,7 @@
             // plotButton
             // 
             this.plotButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.plotButton.Location = new System.Drawing.Point(476, 55);
+            this.plotButton.Location = new System.Drawing.Point(686, 55);
             this.plotButton.Name = "plotButton";
             this.plotButton.Size = new System.Drawing.Size(95, 23);
             this.plotButton.TabIndex = 4;
@@ -74,7 +75,7 @@
             // getDataframeButton
             // 
             this.getDataframeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.getDataframeButton.Location = new System.Drawing.Point(476, 96);
+            this.getDataframeButton.Location = new System.Drawing.Point(686, 96);
             this.getDataframeButton.Name = "getDataframeButton";
             this.getDataframeButton.Size = new System.Drawing.Size(95, 23);
             this.getDataframeButton.TabIndex = 5;
@@ -85,7 +86,7 @@
             // getListButton
             // 
             this.getListButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.getListButton.Location = new System.Drawing.Point(476, 135);
+            this.getListButton.Location = new System.Drawing.Point(686, 135);
             this.getListButton.Name = "getListButton";
             this.getListButton.Size = new System.Drawing.Size(95, 23);
             this.getListButton.TabIndex = 6;
@@ -98,9 +99,9 @@
             this.resultBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.resultBox.Location = new System.Drawing.Point(15, 58);
+            this.resultBox.Location = new System.Drawing.Point(58, 164);
             this.resultBox.Name = "resultBox";
-            this.resultBox.Size = new System.Drawing.Size(442, 326);
+            this.resultBox.Size = new System.Drawing.Size(611, 365);
             this.resultBox.TabIndex = 7;
             this.resultBox.TabStop = false;
             this.resultBox.Text = "Result";
@@ -109,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 405);
+            this.ClientSize = new System.Drawing.Size(801, 561);
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.getListButton);
             this.Controls.Add(this.getDataframeButton);

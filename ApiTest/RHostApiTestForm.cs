@@ -32,7 +32,7 @@ namespace ApiTest {
             try {
                 await _sessionStartTask;
                 var result = await _session.ExecuteAndOutputAsync(codeBox.Text);
-                DisplayResult(new TextBox() { Text = result.Output });
+                DisplayResult(result.Output);
             } catch (Exception ex) {
                 DisplayResult(ex.Message);
             }
@@ -131,6 +131,7 @@ namespace ApiTest {
             var pb = new TextBox();
             pb.Multiline = true;
             pb.ReadOnly = true;
+            pb.ScrollBars = ScrollBars.Both;
             pb.Text = text;
             return pb;
         }
