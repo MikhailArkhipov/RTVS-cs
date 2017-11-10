@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -96,7 +99,7 @@ namespace ApiTest {
 
         private void DisplayResult(DataFrame df) {
             var table = new DataTable();
-            int i = 1;
+            var i = 1;
 
             foreach (var name in df.ColumnNames) {
                 var col = new DataColumn(string.IsNullOrEmpty(name) ? i.ToString() : name);
@@ -104,9 +107,9 @@ namespace ApiTest {
                 i++;
             }
 
-            for (int rnum = 0; rnum < df.RowNames.Count; rnum++) {
+            for (var rnum = 0; rnum < df.RowNames.Count; rnum++) {
                 var row = table.NewRow();
-                for (int cnum = 0; cnum < df.ColumnNames.Count; cnum++) {
+                for (var cnum = 0; cnum < df.ColumnNames.Count; cnum++) {
                     var colName = df.ColumnNames[cnum];
                     row[colName] = df.Data[cnum][rnum];
                 }
@@ -116,23 +119,23 @@ namespace ApiTest {
             var ds = new DataSet();
             ds.Tables.Add(table);
 
-            var grid = new DataGrid();
-            grid.DataSource = ds;
-            grid.DataMember = "Table1";
+            var grid = new DataGrid {
+                DataSource = ds,
+                DataMember = "Table1"
+            };
 
             DisplayResult(grid);
         }
 
-        private void DisplayResult(string result) {
-            DisplayResult(CreateTextBox(result));
-        }
+        private void DisplayResult(string result) => DisplayResult(CreateTextBox(result));
 
         private TextBox CreateTextBox(string text = null) {
-            var pb = new TextBox();
-            pb.Multiline = true;
-            pb.ReadOnly = true;
-            pb.ScrollBars = ScrollBars.Both;
-            pb.Text = text;
+            var pb = new TextBox {
+                Multiline = true,
+                ReadOnly = true,
+                ScrollBars = ScrollBars.Both,
+                Text = text
+            };
             return pb;
         }
     }
